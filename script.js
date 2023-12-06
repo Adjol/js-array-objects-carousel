@@ -21,8 +21,8 @@ images.forEach((object, ind) => {
             <div class="item">
                 <div id="nascondi">${ind}</div>
                 <img src="${object.image}">
-                <span>${object.title}</span>
-                <p>${object.text}</p>
+                <span class="title">${object.title} </span>
+                <p class="description">${object.text}</p>
 
             </div>`;
     console.log(object.title);
@@ -32,19 +32,16 @@ images.forEach((object, ind) => {
 
 
 
-
-
-
-
 const items = document.getElementsByClassName('item');
 
-let activeItem = 0;
 
 const arrowDown = document.querySelector(".fa-arrow-down");
 
 const arrowUp = document.querySelector(".fa-arrow-up");
 
+let activeItem = 0;
 
+items[0].classList.add("active");
 
 arrowDown.addEventListener("click", function() {
 
